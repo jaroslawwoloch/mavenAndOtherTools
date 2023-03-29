@@ -1,3 +1,5 @@
+package org.ey.gds.woloch;
+
 import org.apache.log4j.Logger;
 
 public class Exc1 {
