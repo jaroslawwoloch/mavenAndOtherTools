@@ -1,0 +1,27 @@
+<project name="Code1" default="compile" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant" >
+    <property name="src" value="src"/>
+    <property name="destination" value="build"/>
+    <property name="output" value="output"/>
+
+    <target name="resolve" description="--> retrieve dependencies with Ivy">
+        <ivy:retrieve/>
+        <ivy:cachepath pathid="new.classpath" />
+    </target>
+
+
+    <target name="init" depends="resolve">
+        <mkdir dir="${destination}" />
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="${src}" destdir="${destination}">
+            <classpath refid="new.classpath" />
+        </javac>
+    </target>
+
+    <target name="clean" description="clean up">
+        <delete dir="${destination}"/>
+        <delete dir="${output}"/>
+    </target>
+
+</project>

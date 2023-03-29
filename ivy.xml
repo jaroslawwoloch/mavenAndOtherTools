@@ -1,0 +1,6 @@
+<ivy-module version="2.0">
+    <info  organisation="org.ey.gds.woloch" module="Code1"/>
+    <dependencies>
+        <dependency org="log4j" name="log4j" rev="1.2.13"/>
+    </dependencies>
+</ivy-module>

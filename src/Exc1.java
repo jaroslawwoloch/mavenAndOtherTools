@@ -6,5 +6,6 @@ public class Exc1 {
 
     public static void main(String[] args) {
         LOG.info("hello");
+//        System.out.println("hello");
     }
 }
